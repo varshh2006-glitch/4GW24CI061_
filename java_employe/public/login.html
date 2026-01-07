@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="bg-dark d-flex align-items-center" style="height:100vh">
+    <div class="card mx-auto p-4" style="width:320px">
+        <h4 class="text-center">Admin Login</h4>
+        <input type="text" id="u" class="form-control mb-2" placeholder="User (admin)">
+        <input type="password" id="p" class="form-control mb-3" placeholder="Pass (1234)">
+        <button class="btn btn-primary w-100" onclick="if(u.value=='admin'&&p.value=='1234')location.href='index.html';else alert('Error')">Login</button>
+    </div>
+</body>
+</html>

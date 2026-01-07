@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>CPU Scheduling Simulator</h1>
+
+    <!-- Step 1: Ask number of processes -->
+    <div class="input-box">
+      <label>Number of Processes:</label>
+      <input type="number" id="numProcesses" min="1" placeholder="Enter number of processes">
+      <button onclick="createProcessInputs()">Create Inputs</button>
+    </div>
+
+    <!-- Step 2: Dynamic process inputs -->
+    <div id="processInputs"></div>
+
+    <!-- Step 3: Algorithm selection -->
+    <div class="algorithm-box">
+      <label>Select Algorithm:</label>
+      <select id="algorithm">
+        <option value="FCFS">FCFS</option>
+        <option value="SJF">SJF (Non-Preemptive)</option>
+        <option value="SRTF">SRTF (Preemptive)</option>
+        <option value="PRIORITY_NP">Priority (Non-Preemptive)</option>
+        <option value="PRIORITY_P">Priority (Preemptive)</option>
+        <option value="RR">Round Robin</option>
+      </select>
+
+      <label>Time Quantum (for Round Robin):</label>
+      <input type="number" id="timeQuantum" placeholder="e.g. 2" value="2">
+
+      <button onclick="simulate()">Simulate</button>
+    </div>
+
+    <!-- Step 4: Table and stats -->
+    <h2>Process Table</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+          <th>Priority</th>
+          <th>Completion Time</th>
+          <th>Turnaround Time</th>
+          <th>Waiting Time</th>
+        </tr>
+      </thead>
+      <tbody id="processTable"></tbody>
+    </table>
+
+    <div id="averages"></div>
+
+    <!-- Step 5: Gantt Chart -->
+    <h2>Gantt Chart</h2>
+    <div id="ganttChart"></div>
+
+    <script src="script.js"></script>
+  </body>
+
+  </html>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
